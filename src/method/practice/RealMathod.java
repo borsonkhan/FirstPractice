@@ -13,6 +13,8 @@ public class RealMathod {
 		System.out.println("Q6 = " + getKilometer(3));
 		System.out.println("Q7 = " + getListOfName("borsonkhan"));
 		System.out.println("Q8 = " + getTextCharacter("borsonkhan"));
+		System.out.println("Q9 = " + getSumOfNumber(5));
+		System.out.println("Q10 = "+ getSquare(3));
 
 	}
 
@@ -193,19 +195,42 @@ public class RealMathod {
 	/*
 	 * Q10 = write a method that take one number and return square of the that
 	 * number;
+	 * input = int number;
+	 * return type = int;
+	 * serving bucket = variable;
 	 */
+	public static int getSquare(int number) {
+		int square = 0;
+		
+		square = number * number;
+		
+		return square;
+	}
 
 	/*
 	 * Q9 = write a method take one number input and return the sum of 1 to that
 	 * given number;
-	 * 
+	 * input = int 
+	 * return type = int 
+	 * serving bucket = variable;
 	 */
+	public static int getSumOfNumber(int number) {
+		int sum = 0;
+		
+		for(int i=0;i<=number;i++) {
+			
+			sum = sum + i;
+		}
+		
+		return sum;
+	}
 
 	/*
 	 * Q8 = write a method that take one string and return list of all character;
 	 * input = string name; return type = ArrayList<character> serving bucket =
 	 * list;
 	 */
+	
 
 	public static ArrayList<Character> getTextCharacter(String name) {
 		ArrayList<Character> text = new ArrayList<Character>();
