@@ -11,6 +11,8 @@ public class RealMathod {
 		System.out.println("Q4 = " + getEvenNumber(20));
 		System.out.println("Q5 = " + getOddList(20));
 		System.out.println("Q6 = " + getKilometer(3));
+		System.out.println("Q7 = " + getListOfName("borsonkhan"));
+		System.out.println("Q8 = " + getTextCharacter("borsonkhan"));
 
 	}
 
@@ -201,27 +203,46 @@ public class RealMathod {
 
 	/*
 	 * Q8 = write a method that take one string and return list of all character;
-	 * 
+	 * input = string name; return type = ArrayList<character> serving bucket =
+	 * list;
 	 */
+
+	public static ArrayList<Character> getTextCharacter(String name) {
+		ArrayList<Character> text = new ArrayList<Character>();
+
+		for (int i = 0; i < name.length(); i++) {
+
+			text.add(name.charAt(i));
+		}
+
+		return text;
+	}
 
 	/*
 	 * Q7 = write a method that take one string input and return a list of all
-	 * index;
-	 * 
+	 * index; input = String name; Return type = ArrayLIST<Integer>; serving bucket
+	 * = list;
 	 */
+	public static ArrayList<Integer> getListOfName(String name) {
+		ArrayList<Integer> text = new ArrayList<Integer>();
+
+		for (int i = 0; i < name.length(); i++) {
+
+			text.add(i);
+		}
+
+		return text;
+	}
 
 	/*
-	 * Q6 = write a method that take input as mile and return as a kilometer;
-	 * input = int number;
-	 * return type = int;
-	 * serving bucket = variable;
+	 * Q6 = write a method that take input as mile and return as a kilometer; input
+	 * = int number; return type = int; serving bucket = variable;
 	 */
 	public static int getKilometer(int number) {
 		int kilometer = 0;
-		
+
 		kilometer = number * 106;
-		
-		
+
 		return kilometer;
 	}
 
@@ -235,8 +256,8 @@ public class RealMathod {
 
 		for (int i = 0; i < number; i++) {
 
-			if (i % 2 == 1);
-				
+			if (i % 2 == 1)
+				;
 
 			odd.add(i);
 		}
