@@ -10,6 +10,7 @@ public class RealMathod {
 		System.out.println("Q3 = " + getLowerName("BORSON KHAN"));
 		System.out.println("Q4 = " + getEvenNumber(20));
 		System.out.println("Q5 = " + getOddList(20));
+		System.out.println("Q6 = " + getKilometer(3));
 
 	}
 
@@ -211,8 +212,18 @@ public class RealMathod {
 
 	/*
 	 * Q6 = write a method that take input as mile and return as a kilometer;
-	 * 
+	 * input = int number;
+	 * return type = int;
+	 * serving bucket = variable;
 	 */
+	public static int getKilometer(int number) {
+		int kilometer = 0;
+		
+		kilometer = number * 106;
+		
+		
+		return kilometer;
+	}
 
 	/*
 	 * Q5= write a method a number input and return the list of all odd number from
