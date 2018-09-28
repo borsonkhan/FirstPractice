@@ -1,6 +1,7 @@
 package method.practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class RealMathod {
 
@@ -14,7 +15,19 @@ public class RealMathod {
 		System.out.println("Q7 = " + getListOfName("borsonkhan"));
 		System.out.println("Q8 = " + getTextCharacter("borsonkhan"));
 		System.out.println("Q9 = " + getSumOfNumber(5));
-		System.out.println("Q10 = "+ getSquare(3));
+		System.out.println("Q10 = " + getSquare(3));
+		System.out.println("Q11 = " + Arrays.toString(getGivenNumber(5)));
+		System.out.println("Q12 = " + Arrays.toString(getContainNumber(9)));
+		System.out.println("Q13 = " + getGivenList(5));
+		System.out.println("Q14 = " + getFizzBuzzText(9));
+		
+		int [] numberArray = {4 , 90 , 78,2};
+		System.out.println("Q15 = " + (getMiniNumber(numberArray)));
+		
+
+		int [] numberArrayTwo = {4 , 90 , 78,2};
+		System.out.println("Q16 = " + (getMaxNumber(numberArrayTwo)));
+
 
 	}
 
@@ -152,20 +165,40 @@ public class RealMathod {
 	 * Q16 = write a method that take one number array and return the maximum
 	 * number;
 	 */
+	public static int getMaxNumber(int[] numberArrayTwo) {
+		int max = numberArrayTwo[0];
+		
+		for(int i=0; i<numberArrayTwo.length;i++) {
+			
+			if(max<numberArrayTwo[i]) {
+				
+				max = numberArrayTwo[i];
+			}
+		}
+		
+		return max;
+	}
 
 	/*
 	 * Q15 = write a method that take one number array input and return the minimum
 	 * number ;
-	 * 
-	 * /*
-	 * 
-	 * Q14 = write a method that take one number input and return a number "fizz" if
-	 * 
-	 * the given number divided by 5 and return "buzz" if the given number divided
-	 * 
-	 * by 5&&3 otherwise return "fizzbuzz";
-	 * 
+	 * input = int[] number;
+	 * return type = int;
+	 * serving bucket = 0;
 	 */
+	public static int getMiniNumber(int[]numberArray) {
+		int mini = numberArray[0];
+		
+		for(int i=0;i<numberArray.length;i++) {
+			
+			if(mini>numberArray[i]) {
+				
+				mini = numberArray[i];
+			}
+		}
+		
+		return mini;
+	}
 
 	/*
 	 * 
@@ -176,52 +209,98 @@ public class RealMathod {
 	 * by 5&&3 otherwise return "fizzbuzz";
 	 * 
 	 */
+
+	public static String getFizzBuzzText(int number) {
+
+		String fizzBuzz = " ";
+		
+		
+		if(number% 5 ==0 && number% 3 ==0) {
+			
+			fizzBuzz = "fizz";
+		}else if(number%3 ==0) {
+			
+			fizzBuzz = "buzz";
+		}else {
+			
+			fizzBuzz = "fizzbuzz";
+		}
+		
+		
+		return fizzBuzz;
+	}
 
 	/*
 	 * Q13 = write a method that take one number input and return number list 0 to
 	 * given number;
 	 */
+	public static ArrayList<Integer> getGivenList(int number) {
+		ArrayList<Integer> givenList = new ArrayList<Integer>();
+
+		for (int i = 0; i < number; i++) {
+
+			givenList.add(i);
+		}
+
+		return givenList;
+	}
 
 	/*
 	 * Q12 = write a method take one number input and return an array that contain 1
 	 * to that given number;
 	 */
 
+	public static int[] getContainNumber(int number) {
+		int[] containNumber = new int[number + 1];
+
+		for (int i = 1; i <= number; i++) {
+
+			containNumber[i] = i;
+		}
+
+		return containNumber;
+	}
+
 	/*
 	 * Q11 = write a method that take one number input and return an array that
 	 * contain 0 to given number;
 	 */
+	public static int[] getGivenNumber(int number) {
+		int[] givenNumber = new int[number + 1];
+
+		for (int i = 0; i <= number; i++) {
+
+			givenNumber[i] = i;
+
+		}
+
+		return givenNumber;
+	}
 
 	/*
 	 * Q10 = write a method that take one number and return square of the that
-	 * number;
-	 * input = int number;
-	 * return type = int;
-	 * serving bucket = variable;
+	 * number; input = int number; return type = int; serving bucket = variable;
 	 */
 	public static int getSquare(int number) {
 		int square = 0;
-		
+
 		square = number * number;
-		
+
 		return square;
 	}
 
 	/*
 	 * Q9 = write a method take one number input and return the sum of 1 to that
-	 * given number;
-	 * input = int 
-	 * return type = int 
-	 * serving bucket = variable;
+	 * given number; input = int return type = int serving bucket = variable;
 	 */
 	public static int getSumOfNumber(int number) {
 		int sum = 0;
-		
-		for(int i=0;i<=number;i++) {
-			
+
+		for (int i = 0; i <= number; i++) {
+
 			sum = sum + i;
 		}
-		
+
 		return sum;
 	}
 
@@ -230,7 +309,6 @@ public class RealMathod {
 	 * input = string name; return type = ArrayList<character> serving bucket =
 	 * list;
 	 */
-	
 
 	public static ArrayList<Character> getTextCharacter(String name) {
 		ArrayList<Character> text = new ArrayList<Character>();
