@@ -20,14 +20,16 @@ public class RealMathod {
 		System.out.println("Q12 = " + Arrays.toString(getContainNumber(9)));
 		System.out.println("Q13 = " + getGivenList(5));
 		System.out.println("Q14 = " + getFizzBuzzText(9));
-		
-		int [] numberArray = {4 , 90 , 78,2};
-		System.out.println("Q15 = " + (getMiniNumber(numberArray)));
-		
 
-		int [] numberArrayTwo = {4 , 90 , 78,2};
-		System.out.println("Q16 = " + (getMaxNumber(numberArrayTwo)));
+		int[] numberArray = { 4, 90, 78, 2 };
+		System.out.println("Q15 = " + getMiniNumber(numberArray));
 
+		int[] numberArrayTwo = { 4, 90, 78, 2 };
+		System.out.println("Q16 = " + getMaxNumber(numberArrayTwo));
+		System.out.println("Q17 = " + getSameValue(4));
+		System.out.println("Q18 = " + getIntegerValue("6"));
+		System.out.println("Q19 = " + getContainText("borsons"));
+		System.out.println("Q20 = " + getSumOFValue("khan"));
 
 	}
 
@@ -39,7 +41,7 @@ public class RealMathod {
 	 */
 	/*
 	 * Q46 = write a method that take string input and return alternative character
-	 * as a string ;
+	 * as a string
 	 */
 	/*
 	 * Q45 = write a method that take one string input which contain an email adress
@@ -145,21 +147,53 @@ public class RealMathod {
 
 	/*
 	 * Q20 = write a method that take one string input and return the sum of all
+	 * value;
 	 */
+	public static int getSumOFValue(String name) {
+		int value = 0;
+
+		for (int i = 0; i < name.length(); i++) {
+
+			value = value + i;
+		}
+
+		return value;
+	}
 
 	/*
 	 * Q19 = write a method take string input and return true if it contain char 'o'
 	 */
+	public static boolean getContainText(String name) {
+		boolean text = false;
+
+		text = name.contains("o");
+
+		return text;
+	}
 
 	/*
 	 * Q18 = write a method that take a string representation of number input and
 	 * return the same value as a int;
 	 */
+	public static int getIntegerValue(String num) {
+		int value = 0;
+
+		value = Integer.valueOf(num);
+
+		return value;
+	}
 
 	/*
 	 * Q17 = write a method that take a number input and return the same value as
 	 * string;
 	 */
+	public static String getSameValue(int number) {
+		String value = " ";
+
+		value = String.valueOf(number);
+
+		return value;
+	}
 
 	/*
 	 * Q16 = write a method that take one number array and return the maximum
@@ -167,36 +201,33 @@ public class RealMathod {
 	 */
 	public static int getMaxNumber(int[] numberArrayTwo) {
 		int max = numberArrayTwo[0];
-		
-		for(int i=0; i<numberArrayTwo.length;i++) {
-			
-			if(max<numberArrayTwo[i]) {
-				
+
+		for (int i = 0; i < numberArrayTwo.length; i++) {
+
+			if (max < numberArrayTwo[i]) {
+
 				max = numberArrayTwo[i];
 			}
 		}
-		
+
 		return max;
 	}
 
 	/*
 	 * Q15 = write a method that take one number array input and return the minimum
-	 * number ;
-	 * input = int[] number;
-	 * return type = int;
-	 * serving bucket = 0;
+	 * number ; input = int[] number; return type = int; serving bucket = 0;
 	 */
-	public static int getMiniNumber(int[]numberArray) {
+	public static int getMiniNumber(int[] numberArray) {
 		int mini = numberArray[0];
-		
-		for(int i=0;i<numberArray.length;i++) {
-			
-			if(mini>numberArray[i]) {
-				
+
+		for (int i = 0; i < numberArray.length; i++) {
+
+			if (mini > numberArray[i]) {
+
 				mini = numberArray[i];
 			}
 		}
-		
+
 		return mini;
 	}
 
@@ -213,20 +244,18 @@ public class RealMathod {
 	public static String getFizzBuzzText(int number) {
 
 		String fizzBuzz = " ";
-		
-		
-		if(number% 5 ==0 && number% 3 ==0) {
-			
+
+		if (number % 5 == 0 && number % 3 == 0) {
+
 			fizzBuzz = "fizz";
-		}else if(number%3 ==0) {
-			
+		} else if (number % 3 == 0) {
+
 			fizzBuzz = "buzz";
-		}else {
-			
+		} else {
+
 			fizzBuzz = "fizzbuzz";
 		}
-		
-		
+
 		return fizzBuzz;
 	}
 
